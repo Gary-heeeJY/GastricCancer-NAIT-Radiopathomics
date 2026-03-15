@@ -1,0 +1,13 @@
+# @package _global_
+model:
+  name: "wsi_ct"
+  visual_dim: 1024
+  ct_dim: 107
+  hidden_dim: 256
+  dropout_rate: 0.4
+training:
+  gpu_id: 2
+paths:
+  output_dir: "${paths.base_data_dir}/Result/FINAL/WSI_CT_Dual"
+swanlab:
+  name: "WSI_CT_Dual"

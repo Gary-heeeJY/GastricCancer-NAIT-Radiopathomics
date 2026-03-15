@@ -1,0 +1,35 @@
+defaults:
+  - _self_
+  - model: abmil_gmu_tri
+
+paths:
+  base_data_dir: "/server03_data/LJC/datasets/zhongzhon2/zsh"
+  original_excel_dir: "${paths.base_data_dir}/Data/Preprocess_Data.xlsx"
+  feature_dir: "${paths.base_data_dir}/2. pathology_feature_MUSK"
+  ct_features_dir: "${paths.base_data_dir}/3. CT_Radiomics_Features/ct_radiomics_features.csv"
+  split_dir: "${paths.base_data_dir}/Data/Data_splite"
+  output_dir: "${paths.base_data_dir}/Result/FINAL/TriModal"
+
+dataset:
+  batch_size: 1
+  num_workers: 4
+
+training:
+  gpu_id: 0
+  epochs: 70
+  lr: 1e-4
+  weight_decay: 1e-4
+  current_fold: 1
+  pos_weight: 3.11
+  gradient_accumulation_steps: 8
+  seed: 42             # 👈 新增：固定随机数种子
+  early_stopping:
+    enable: False
+    patience: 15
+
+swanlab:
+  enable: True
+  api_key: "65ejCrKW8mRqGqOQZrGrW"
+  project: "GastricCancer_pCR_Prediction"
+  workspace: NULL
+  name: "ABMIL_GMU_TriModal"

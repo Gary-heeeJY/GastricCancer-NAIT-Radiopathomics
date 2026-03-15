@@ -1,0 +1,23 @@
+# @package _global_
+
+model:
+  name: "mlp_ct"
+  use_ct: True         # 必须为 True 才能让 dataloader 去读 CT 的 csv
+  ct_dim: 107          # 你的 CT 特征维度
+  hidden_dim: 64
+  dropout_rate: 0.5    # 依然保持较强的 Dropout 压制过拟合
+
+training:
+  gpu_id: 2
+  lr: 2e-4
+  weight_decay: 1e-2
+
+paths:
+  output_dir: "${paths.base_data_dir}/Result/FINAL/CT_Only"
+
+swanlab:
+  enable: True
+  api_key: "65ejCrKW8mRqGqOQZrGrW"
+  project: "GastricCancer_pCR_Prediction"
+  workspace: null
+  name: "CT_Only"

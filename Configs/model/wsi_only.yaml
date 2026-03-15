@@ -1,0 +1,12 @@
+# @package _global_
+model:
+  name: "wsi_only"
+  visual_dim: 1024
+  hidden_dim: 256
+  dropout_rate: 0.4
+training:
+  gpu_id: 1
+paths:
+  output_dir: "${paths.base_data_dir}/Result/FINAL/WSI_Only"
+swanlab:
+  name: "WSI_Only"

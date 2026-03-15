@@ -1,0 +1,25 @@
+# @package _global_
+model:
+  name: "abmil_gmu_tri"
+  visual_dim: 1024     # 修改为实际提取的 1024
+  text_dim: 1024       # 修改为实际提取的 1024
+  ct_dim: 107
+  hidden_dim: 256      # 隐藏层可以保持 512 也可以改成 256
+  lr: 5e-4
+  weight_decay: 1e-2
+  dropout_rate: 0.4    # 样本量少，适当调高 Dropout 防过拟合
+
+paths:
+  base_data_dir: "/server03_data/LJC/datasets/zhongzhon2/zsh"
+  original_excel_dir: "${paths.base_data_dir}/Data/Preprocess_Data.xlsx"
+  feature_dir: "${paths.base_data_dir}/2. pathology_feature_MUSK"
+  ct_features_dir: "${paths.base_data_dir}/3. CT_Radiomics_Features/ct_radiomics_features.csv"
+  split_dir: "${paths.base_data_dir}/Data/Data_splite"
+  output_dir: "${paths.base_data_dir}/Result/FINAL/TriModal_new"
+
+swanlab:
+  enable: True
+  api_key: "65ejCrKW8mRqGqOQZrGrW"
+  project: "GastricCancer_pCR_Prediction"
+  workspace: null
+  name: "TriModal_S1" # 👈 直接在这里控制项目名称

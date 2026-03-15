@@ -1,0 +1,16 @@
+# @package _global_
+model:
+  name: "text_ct"
+  text_dim: 1024
+  ct_dim: 107
+  hidden_dim: 256
+  dropout_rate: 0.4
+
+training:
+  gpu_id: 4   # 👈 这次安全起见，设为 0
+
+paths:
+  output_dir: "${paths.base_data_dir}/Result/FINAL/Text_CT_Dual"
+
+swanlab:
+  name: "Text_CT_Dual"

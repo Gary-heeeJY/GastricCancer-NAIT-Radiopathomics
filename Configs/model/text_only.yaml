@@ -1,0 +1,12 @@
+# @package _global_
+model:
+  name: "text_only"
+  text_dim: 1024
+  hidden_dim: 64
+  dropout_rate: 0.5
+training:
+  gpu_id: 4
+paths:
+  output_dir: "${paths.base_data_dir}/Result/FINAL/Text_Only"
+swanlab:
+  name: "Text_Only"

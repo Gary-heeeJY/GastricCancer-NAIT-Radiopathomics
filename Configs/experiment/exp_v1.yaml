@@ -1,0 +1,9 @@
+# @package _global_
+# 覆盖基础配置，专门用于某次实验
+defaults:
+  - override /model: abmil_gmu
+
+training:
+  lr: 5e-5
+  epochs: 100
+  current_fold: 2
