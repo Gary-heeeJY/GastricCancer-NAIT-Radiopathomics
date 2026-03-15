@@ -10,16 +10,16 @@ model:
   dropout_rate: 0.4    # 样本量少，适当调高 Dropout 防过拟合
 
 paths:
-  base_data_dir: "/server03_data/LJC/datasets/zhongzhon2/zsh"
-  original_excel_dir: "${paths.base_data_dir}/Data/Preprocess_Data.xlsx"
-  feature_dir: "${paths.base_data_dir}/2. pathology_feature_MUSK"
-  ct_features_dir: "${paths.base_data_dir}/3. CT_Radiomics_Features/ct_radiomics_features.csv"
-  split_dir: "${paths.base_data_dir}/Data/Data_splite"
-  output_dir: "${paths.base_data_dir}/Result/FINAL/TriModal_new"
+  base_data_dir: "/.."
+  original_excel_dir: "${paths.base_data_dir}/.."
+  feature_dir: "${paths.base_data_dir}/.."
+  ct_features_dir: "${paths.base_data_dir}/.."
+  split_dir: "${paths.base_data_dir}/.."
+  output_dir: "${paths.base_data_dir}/.."
 
 swanlab:
   enable: True
-  api_key: "65ejCrKW8mRqGqOQZrGrW"
+  api_key: ".."
   project: "GastricCancer_pCR_Prediction"
   workspace: null
   name: "TriModal_S1" # 👈 直接在这里控制项目名称
