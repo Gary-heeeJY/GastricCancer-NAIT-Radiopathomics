@@ -17,7 +17,7 @@ paths:
 
 swanlab:
   enable: True
-  api_key: "65ejCrKW8mRqGqOQZrGrW"
+  api_key: ".."
   project: "GastricCancer_pCR_Prediction"
   workspace: null
   name: "CT_Only"
